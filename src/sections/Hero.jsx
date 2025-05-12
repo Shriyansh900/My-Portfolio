@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FiArrowDown } from "react-icons/fi";
 import { aboutMe } from "../data";
 import { IoMdDownload } from "react-icons/io";
-import MyPic from "../assets/IMG_20230112_222005_348.jpg"
+import MyPic from "../assets/businessman-profile-icon-male-portrait-flat-design-vector-illustration-47075259.webp"
 
 const Hero = () => {
   const scrollToNextSection = () => {
@@ -15,7 +15,7 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
     >
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 dark:from-primary-900/20 dark:to-secondary-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 dark:from-black dark:to-blue-900/10"></div>
         {/* Abstract shapes */}
         <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full bg-primary-400/10 blur-3xl dark:bg-primary-400/5"></div>
         <div className="absolute bottom-20 right-1/4 w-64 h-64 rounded-full bg-secondary-400/10 blur-3xl dark:bg-secondary-400/5"></div>
@@ -45,9 +45,9 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Hi, I'm{" "}
+              Hi, I'm&nbsp;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">
-                {aboutMe.name}
+                 {aboutMe.name}
               </span>
             </motion.h1>
 
@@ -57,13 +57,16 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Full Stack Developer crafting &nbsp;
-              <span className="text-primary-500 dark:text-primary-400">
-                responsive web and mobile apps &nbsp;
-              </span>
-              with modern tech. Passionate about &nbsp;
               <span className="text-secondary-500 dark:text-secondary-400">
-              clean code, UX, and innovation
+                Full Stack Developer
+              </span>
+              <span className="mx-1">crafting</span>
+              <span className="text-primary-500 dark:text-primary-400">
+                responsive web and mobile apps
+              </span>
+              <span className="mx-1">with modern tech. Passionate about</span>
+              <span className="text-secondary-500 dark:text-secondary-400">
+                clean code, UX, and innovation
               </span>
             </motion.p>
 
@@ -79,7 +82,7 @@ const Hero = () => {
               <a href="#portfolio" className="btn btn-outline">
                 View My Work
               </a>
-              <a href="#" className="btn btn-outline items-center flex align-middle justify-center space-x-1 px-10">
+              <a target="_blank" href="https://drive.google.com/file/d/1xWrCg2kj19KYgKv5uzAEiOy4N5D_yuT_/view?usp=sharing" className="btn btn-outline items-center flex align-middle justify-center space-x-1 px-10">
                 <p>Resume</p>
                  <IoMdDownload className="text-xl  font-bold" />
               </a>

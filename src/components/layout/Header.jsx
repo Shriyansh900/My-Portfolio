@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi'
 
@@ -19,7 +20,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Projects', href: '#portfolio' },
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' },
   ]
@@ -40,7 +41,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
           className="flex items-center"
         >
           <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-            Shriyansh Portfolio
+            Shriyansh&#39;s Portfolio
           </a>
         </motion.div>
 
@@ -113,6 +114,10 @@ const Header = ({ darkMode, toggleDarkMode }) => {
       )}
     </header>
   )
+}
+Header.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+  toggleDarkMode: PropTypes.func.isRequired,
 }
 
 export default Header

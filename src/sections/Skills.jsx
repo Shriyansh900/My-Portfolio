@@ -19,24 +19,22 @@ const Skills = () => {
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
     visible: { 
       opacity: 1, 
+      scale: 1,
       y: 0,
-      transition: { duration: 0.5 } 
+      transition: { 
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        duration: 0.5 
+      } 
     },
   }
 
-  const barVariants = {
-    hidden: { width: 0 },
-    visible: level => ({ 
-      width: `${level}%`,
-      transition: { duration: 1, ease: "easeOut" } 
-    }),
-  }
-
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section bg-gray-50 dark:bg-dark-300/20">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,8 +45,7 @@ const Skills = () => {
         >
           <h2 className="section-title pb-4">My Skills</h2>
           <p className="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            I've worked with a variety of technologies and methodologies throughout my career.
-            Here's an overview of my technical expertise and proficiency levels.
+            Here are the technologies and tools I work with
           </p>
         </motion.div>
 
@@ -57,39 +54,33 @@ const Skills = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 gap-12"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
         >
-          {skills.map((skillCategory, categoryIndex) => (
+          {skills.map((skill, index) => (
             <motion.div
-              key={categoryIndex}
+              key={index}
               variants={itemVariants}
-              className="bg-white dark:bg-dark-100 rounded-xl shadow-md p-8"
+              whileHover={{ 
+                scale: 1.05,
+                transition: { type: "spring", stiffness: 300 }
+              }}
+              className="group relative bg-white dark:bg-dark-100 rounded-xl p-6 flex flex-col items-center justify-center gap-4 shadow-md hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(59,130,246,0.1)] transition-all duration-300 cursor-pointer backdrop-blur-sm hover:bg-primary-50/50 dark:hover:bg-primary-900/10 border border-transparent hover:border-primary-200 dark:hover:border-primary-800 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r before:from-primary-500/20 before:to-secondary-500/20 before:opacity-0 before:transition-opacity hover:before:opacity-100"
             >
-              <h3 className="text-xl font-bold mb-6 text-primary-600 dark:text-primary-400">
-                {skillCategory.category}
+              <motion.div 
+                className="w-12 h-12 flex items-center justify-center relative z-10"
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+              >
+                <img 
+                  src={skill.icon} 
+                  alt={skill.name} 
+                  className="w-full h-full object-contain group-hover:filter group-hover:brightness-110 transition-all duration-300"
+                />
+              </motion.div>
+              <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 text-center group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300 relative z-10">
+                {skill.name}
               </h3>
-
-              <div className="space-y-6">
-                {skillCategory.items.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-800 dark:text-gray-200">
-                        {skill.name}
-                      </span>
-                      <span className="text-sm text-gray-600 dark:text-gray-400">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="skill-bar">
-                      <motion.div
-                        className="skill-progress bg-gradient-to-r from-primary-500 to-secondary-500"
-                        custom={skill.level}
-                        variants={barVariants}
-                      ></motion.div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 to-secondary-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
           ))}
         </motion.div>

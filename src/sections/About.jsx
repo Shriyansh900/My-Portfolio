@@ -3,7 +3,6 @@ import { useInView } from 'react-intersection-observer'
 import { FiMapPin, FiMail, FiUser, FiCalendar, FiLinkedin } from 'react-icons/fi'
 import { aboutMe, education, timeline } from '../data'
 import MyPic from "../assets/IMG_20230112_222005_348.jpg"
-import { LiaLinkedin } from 'react-icons/lia'
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -27,7 +26,7 @@ const About = () => {
   }
 
   return (
-    <section id="about" className="section bg-gray-50 dark:bg-dark-300/20">
+    <section id="about" className="section bg-gray-50 dark:bg-slate-900/20">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

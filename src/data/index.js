@@ -1,42 +1,88 @@
 // Skills data
 export const skills = [
   {
-    category: "Frontend",
-    items: [
-      { name: "React", level: 90 },
-      { name: "JavaScript", level: 95 },
-      { name: "HTML/CSS", level: 95 },
-      { name: "Tailwind CSS", level: 95 },
-      { name: "Redux", level: 80 },
-    ],
+    name: 'C Language',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
   },
   {
-    category: "Backend",
-    items: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 80 },
-      { name: "MongoDB", level: 75 },
-      { name: "GraphQL", level: 70 },
-      { name: "Firebase", level: 75 },
-    ],
+    name: 'TypeScript',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
   },
   {
-    category: "Design",
-    items: [
-      { name: "Figma", level: 80 },
-      { name: "UI/UX", level: 85 },
-      { name: "Responsive Design", level: 90 },
-      { name: "Design Systems", level: 75 },
-    ],
+    name: 'Express',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
   },
   {
-    category: "Other",
-    items: [
-      { name: "Git/GitHub", level: 90 },
-      { name: "Jest", level: 75 },
-      { name: "Webpack", level: 70 },
-      { name: "Docker", level: 65 },
-    ],
+    name: 'NodeJS',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  },
+  {
+    name: 'Postman',
+    icon: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg',
+  },
+  {
+    name: 'Dart',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg',
+  },
+  {
+    name: 'Flutter',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg',
+  },
+  {
+    name: 'React Native',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  },
+  {
+    name: 'HTML',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+  },
+  {
+    name: 'CSS',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+  },
+  {
+    name: 'Bootstrap',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+  },
+  {
+    name: 'Redux',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+  },
+  {
+    name: 'Sass',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+  },
+  {
+    name: 'JavaScript',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+  },
+  {
+    name: 'React',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  },
+  {
+    name: 'MySQL',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+  },
+  {
+    name: 'MongoDB',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+  },
+  {
+    name: 'Heroku',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg',
+  },
+  {
+    name: 'Git',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+  },
+  {
+    name: 'Firebase',
+    icon: 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg',
   },
 ];
 
@@ -44,28 +90,28 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "InfluX",
     description:
-      "A modern e-commerce platform with a sleek UI, product filtering, and an intuitive checkout process.",
+    "InfluX is a influencer or Content Creator booking platform connects brands and event organizers with top influencers for concerts, promotions, sponsorships, and other events. Built for ease and efficiency, it enables seamless discovery, booking, and collaboration with influencers and creators across various niches.",
     image:
-      "https://images.pexels.com/photos/6214476/pexels-photo-6214476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    "https://c7.alamy.com/comp/2HP32FW/business-concept-influencer-marketing-big-group-of-clerks-ready-teamwork-filming-of-the-celebrity-and-advance-of-the-content-team-of-businessmen-together-successfully-perform-the-job-2HP32FW.jpg",
+    tags: ["Reac.Js", "Redux", "tailwind"],
     category: "Web Application",
     link: "#",
     github: "#",
   },
-  {
-    id: 2,
-    title: "Task Management App",
-    description:
-      "A productivity app for managing tasks, projects, and deadlines with team collaboration features.",
-    image:
-      "https://images.pexels.com/photos/7376/startup-photos.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React", "Redux", "Firebase", "Material UI"],
-    category: "Web Application",
-    link: "#",
-    github: "#",
-  },
+    {
+      id: 2,
+      title: "Crypto-Sphere",
+      description:
+        "cryptoSphere website provides users real-time cryptocurrency data, market trends, and secure tools for tracking and managing digital assets—all in one intuitive and responsive platform.",
+      image:
+        "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      tags: ["React", "Tailwind", "crypto api"],
+      category: "Web Application",
+      link: "#",
+      github: "#",
+    },
   {
     id: 3,
     title: "Fitness Tracker",
@@ -182,7 +228,8 @@ export const education = [
   {
     year: "2022 - 2023",
     course: "Diploma in Computer Application",
-    school: "Makhanlal Chaturvedi National University of Journalism and Communication",
+    school:
+      "Makhanlal Chaturvedi National University of Journalism and Communication",
     grade: "61%",
     description:
       "A Diploma in Computer Applications equipped me with essential skills in programming, software development, and IT systems, providing a solid foundation for my career as a full-stack web and mobile app developer.",
@@ -214,3 +261,7 @@ My background in electrical engineering taught me how to approach challenges wit
     "Avid rock climber on weekends",
   ],
 };
+
+
+
+
