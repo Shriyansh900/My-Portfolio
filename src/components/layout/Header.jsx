@@ -1,36 +1,38 @@
-import { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
-import { motion } from 'framer-motion'
-import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi'
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { motion } from "framer-motion";
+import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 
 const Header = ({ darkMode, toggleDarkMode }) => {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
+      setScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navigation = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#portfolio' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
-  ]
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#portfolio" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "Contact", href: "#contact" },
+  ];
 
-  const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen)
+  const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   return (
-    <header 
+    <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 dark:bg-dark-200/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        scrolled
+          ? "bg-white/90 dark:bg-dark-200/90 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="container-custom py-4 flex items-center justify-between">
@@ -40,7 +42,10 @@ const Header = ({ darkMode, toggleDarkMode }) => {
           transition={{ duration: 0.5 }}
           className="flex items-center"
         >
-          <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+          <a
+            href="#home"
+            className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent"
+          >
             Shriyansh&#39;s Portfolio
           </a>
         </motion.div>
@@ -61,30 +66,42 @@ const Header = ({ darkMode, toggleDarkMode }) => {
               {item.name}
             </a>
           ))}
-          <button 
+          <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full bg-gray-100 dark:bg-dark-100 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-dark-300 transition duration-300"
+            className="p-2 rounded-full bg-gray-100 dark:bg-dark-100 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-dark-300 transition duration-500  "
             aria-label="Toggle dark mode"
           >
-            {darkMode ? <FiSun className="text-xl" /> : <FiMoon className="text-xl" />}
+            {darkMode ? (
+              <FiSun className="text-xl text-yellow-400 " />
+            ) : (
+              <FiMoon className="text-xl " />
+            )}
           </button>
         </motion.nav>
 
         {/* Mobile Menu Button */}
         <div className="flex items-center md:hidden">
-          <button 
+          <button
             onClick={toggleDarkMode}
             className="p-2 mr-2 rounded-full bg-gray-100 dark:bg-dark-100 text-gray-800 dark:text-gray-200"
             aria-label="Toggle dark mode"
           >
-            {darkMode ? <FiSun className="text-xl" /> : <FiMoon className="text-xl" />}
+            {darkMode ? (
+              <FiSun className="text-xl text-yellow-400" />
+            ) : (
+              <FiMoon className="text-xl" />
+            )}
           </button>
           <button
             onClick={toggleMenu}
             className="p-2 rounded-full bg-gray-100 dark:bg-dark-100 text-gray-800 dark:text-gray-200"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
+            {mobileMenuOpen ? (
+              <FiX className="text-xl" />
+            ) : (
+              <FiMenu className="text-xl" />
+            )}
           </button>
         </div>
       </div>
@@ -93,7 +110,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
       {mobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
+          animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
           className="md:hidden bg-white dark:bg-dark-200 shadow-lg"
@@ -113,11 +130,11 @@ const Header = ({ darkMode, toggleDarkMode }) => {
         </motion.div>
       )}
     </header>
-  )
-}
+  );
+};
 Header.propTypes = {
   darkMode: PropTypes.bool.isRequired,
   toggleDarkMode: PropTypes.func.isRequired,
-}
+};
 
-export default Header
+export default Header;
