@@ -1,25 +1,30 @@
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
-import { projects } from '../data'
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { projects } from "../data";
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState('All')
-  const [filteredProjects, setFilteredProjects] = useState(projects)
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [filteredProjects, setFilteredProjects] = useState(projects);
 
-  const categories = ['All', ...new Set(projects.map(project => project.category))]
+  const categories = [
+    "All",
+    ...new Set(projects.map((project) => project.category)),
+  ];
 
   const handleFilterClick = (category) => {
-    setActiveFilter(category)
-    
-    if (category === 'All') {
-      setFilteredProjects(projects)
-      return
+    setActiveFilter(category);
+
+    if (category === "All") {
+      setFilteredProjects(projects);
+      return;
     }
-    
-    const filtered = projects.filter(project => project.category === category)
-    setFilteredProjects(filtered)
-  }
+
+    const filtered = projects.filter(
+      (project) => project.category === category
+    );
+    setFilteredProjects(filtered);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -29,16 +34,16 @@ const Portfolio = () => {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.5 } 
+      transition: { duration: 0.5 },
     },
-  }
+  };
 
   return (
     <section id="portfolio" className="section bg-gray-50 dark:bg-dark-300/20">
@@ -52,7 +57,8 @@ const Portfolio = () => {
         >
           <h2 className="section-title pb-4">My Portfolio</h2>
           <p className="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Explore my recent projects showcasing my skills and experience in creating innovative and user-friendly applications.
+            Explore my recent projects showcasing my skills and experience in
+            creating innovative and user-friendly applications.
           </p>
         </motion.div>
 
@@ -69,8 +75,8 @@ const Portfolio = () => {
               onClick={() => handleFilterClick(category)}
               className={`px-4 py-2 rounded-full transition-all duration-300 ${
                 activeFilter === category
-                  ? 'bg-primary-500 text-white'
-                  : 'bg-white dark:bg-dark-100 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-200'
+                  ? "bg-primary-500 text-white"
+                  : "bg-white dark:bg-dark-100 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-200"
               }`}
             >
               {category}
@@ -103,6 +109,7 @@ const Portfolio = () => {
                     <div className="flex gap-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                       <a
                         href={project.github}
+                        target="_blank"
                         className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
                         aria-label="GitHub Repository"
                       >
@@ -110,6 +117,7 @@ const Portfolio = () => {
                       </a>
                       <a
                         href={project.link}
+                        target="_blank"
                         className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
                         aria-label="Live Preview"
                       >
@@ -118,7 +126,7 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="p-6 relative">
                   <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-gray-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                     {project.title}
@@ -126,7 +134,7 @@ const Portfolio = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-4 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, index) => (
                       <span
@@ -144,7 +152,7 @@ const Portfolio = () => {
         </AnimatePresence>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

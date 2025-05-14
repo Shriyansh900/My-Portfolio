@@ -1,88 +1,88 @@
 // Skills data
 export const skills = [
   {
-    name: 'C Language',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
+    name: "C Language",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
   },
   {
-    name: 'TypeScript',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   {
-    name: 'Express',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+    name: "Express",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
   },
   {
-    name: 'NodeJS',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    name: "NodeJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
-    name: 'Postman',
-    icon: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg',
+    name: "Postman",
+    icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
   },
   {
-    name: 'Dart',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg',
+    name: "Dart",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
   },
   {
-    name: 'Flutter',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg',
+    name: "Flutter",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
   },
   {
-    name: 'React Native',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    name: "React Native",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
-    name: 'HTML',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+    name: "HTML",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   },
   {
-    name: 'CSS',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    name: "CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
   {
-    name: 'Bootstrap',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+    name: "Bootstrap",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
   },
   {
-    name: 'Redux',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+    name: "Redux",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
   },
   {
-    name: 'Sass',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+    name: "Sass",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
   },
   {
-    name: 'JavaScript',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    name: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
   {
-    name: 'Tailwind CSS',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+    name: "Tailwind CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
-    name: 'React',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
-    name: 'MySQL',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    name: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
   {
-    name: 'MongoDB',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    name: "MongoDB",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
   {
-    name: 'Heroku',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg',
+    name: "Heroku",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg",
   },
   {
-    name: 'Git',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
   {
-    name: 'Firebase',
-    icon: 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg',
+    name: "Firebase",
+    icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
   },
 ];
 
@@ -92,58 +92,58 @@ export const projects = [
     id: 1,
     title: "InfluX",
     description:
-    "InfluX is a influencer or Content Creator booking platform connects brands and event organizers with top influencers for concerts, promotions, sponsorships, and other events. Built for ease and efficiency, it enables seamless discovery, booking, and collaboration with influencers and creators across various niches.",
+      "InfluX is a influencer or Content Creator booking platform connects brands and event organizers with top influencers for concerts, promotions, sponsorships, and other events. Built for ease and efficiency, it enables seamless discovery, booking, and collaboration with influencers and creators across various niches.",
     image:
-    "https://c7.alamy.com/comp/2HP32FW/business-concept-influencer-marketing-big-group-of-clerks-ready-teamwork-filming-of-the-celebrity-and-advance-of-the-content-team-of-businessmen-together-successfully-perform-the-job-2HP32FW.jpg",
+      "https://c7.alamy.com/comp/2HP32FW/business-concept-influencer-marketing-big-group-of-clerks-ready-teamwork-filming-of-the-celebrity-and-advance-of-the-content-team-of-businessmen-together-successfully-perform-the-job-2HP32FW.jpg",
     tags: ["Reac.Js", "Redux", "tailwind"],
     category: "Web Application",
     link: "#",
     github: "#",
   },
-    {
-      id: 2,
-      title: "Crypto-Sphere",
-      description:
-        "cryptoSphere website provides users real-time cryptocurrency data, market trends, and secure tools for tracking and managing digital assets—all in one intuitive and responsive platform.",
-      image:
-        "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      tags: ["React", "Tailwind", "crypto api"],
-      category: "Web Application",
-      link: "#",
-      github: "#",
-    },
+  {
+    id: 2,
+    title: "Crypto-Sphere",
+    description:
+      "cryptoSphere website provides users real-time cryptocurrency data, market trends, and secure tools for tracking and managing digital assets—all in one intuitive and responsive platform.",
+    image:
+      "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tags: ["React", "Tailwind", "crypto api"],
+    category: "Web Application",
+    link: "https://crypto-app-shriyansh-ozarkars-projects.vercel.app/",
+    github: "https://github.com/Shriyansh900/crypto-app-main",
+  },
   {
     id: 3,
-    title: "Fitness Tracker",
+    title: "Pokemon Guess App",
     description:
-      "Mobile app for tracking workouts, nutrition, and progress with personalized recommendations.",
+      "Who's That Pokémon? is a fun and nostalgic guessing game where you identify Pokémon from their silhouettes, just like in the classic TV show. With hundreds of Pokémon from all generations, simple gameplay, and increasing difficulty levels, it's the perfect challenge for fans of all ages!",
     image:
-      "https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React Native", "GraphQL", "AWS"],
-    category: "Mobile App",
-    link: "#",
-    github: "#",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy_uJaBu-kwf2g6JDfVnHQPCyFm-jFs12eQw&s",
+    tags: ["React ", "Pokemon Api", "Tailwind"],
+    category: "Web Application",
+    link: "https://guess-the-pokemon-game-pied.vercel.app/",
+    github: "https://github.com/Shriyansh900/Guess-the-Pokemon-game",
   },
   {
     id: 4,
-    title: "Music Streaming Service",
+    title: "Studio-Maanikh",
     description:
-      "A Spotify-like platform for discovering and streaming music with social sharing features.",
+      "Studio-Maanikh is a modern interior design studio that blends aesthetics with functionality to create timeless living and working spaces. This portfolio website showcases their elegant projects, design philosophy, and attention to detail through a clean, user-friendly interface that reflects the studio’s refined style.",
     image:
-      "https://images.pexels.com/photos/1626481/pexels-photo-1626481.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React", "Node.js", "PostgreSQL", "WebRTC"],
+      "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600",
+    tags: ["React", "Node.js", "Tailwind",],
     category: "Web Application",
-    link: "#",
-    github: "#",
+    link: "https://interior-designer-website.vercel.app/",
+    github: "https://github.com/Shriyansh900/Interior-Designer-Website",
   },
   {
     id: 5,
-    title: "Travel Booking Platform",
+    title: "Wheelzy",
     description:
-      "All-in-one travel booking service for flights, hotels, and experiences with destination recommendations.",
+      "A full-stack Car Rental website built using React.js and styled with Tailwind CSS, featuring user authentication, car listings, booking functionality, and an admin dashboard. The backend is powered by Node.js, Express.js, and MongoDB, enabling seamless data management and a responsive, user-friendly experience across all devices.",
     image:
-      "https://images.pexels.com/photos/2007401/pexels-photo-2007401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React", "Express", "MongoDB", "Maps API"],
+      "https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tags: ["React", "Express", "MongoDB", "State management" , "React routing"],
     category: "Web Application",
     link: "#",
     github: "#",
@@ -261,7 +261,3 @@ My background in electrical engineering taught me how to approach challenges wit
     "Avid rock climber on weekends",
   ],
 };
-
-
-
-

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FiArrowDown } from "react-icons/fi";
 import { aboutMe } from "../data";
 import { IoMdDownload } from "react-icons/io";
-import MyPic from "../assets/businessman-profile-icon-male-portrait-flat-design-vector-illustration-47075259.webp"
+import MyPic from "../assets/businessman-profile-icon-male-portrait-flat-design-vector-illustration-47075259.webp";
 
 const Hero = () => {
   const scrollToNextSection = () => {
@@ -34,8 +34,11 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <span className="inline-block py-1 px-3 mb-4 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium">
-                Full Stack Developer
+              <span
+                
+                className=" inline-block py-1 px-3 mb-4 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium"
+              >
+                <p>Full Stack Developer</p>
               </span>
             </motion.div>
 
@@ -47,7 +50,7 @@ const Hero = () => {
             >
               Hi, I'm&nbsp;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">
-                 {aboutMe.name}
+                {aboutMe.name}
               </span>
             </motion.h1>
 
@@ -82,9 +85,13 @@ const Hero = () => {
               <a href="#portfolio" className="btn btn-outline">
                 View My Work
               </a>
-              <a target="_blank" href="https://drive.google.com/file/d/1xWrCg2kj19KYgKv5uzAEiOy4N5D_yuT_/view?usp=sharing" className="btn btn-outline items-center flex align-middle justify-center space-x-1 px-10">
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1xWrCg2kj19KYgKv5uzAEiOy4N5D_yuT_/view?usp=sharing"
+                className="btn btn-outline items-center flex align-middle justify-center space-x-1 px-10"
+              >
                 <p>Resume</p>
-                 <IoMdDownload className="text-xl  font-bold" />
+                <IoMdDownload className="text-xl  font-bold" />
               </a>
             </motion.div>
           </motion.div>
