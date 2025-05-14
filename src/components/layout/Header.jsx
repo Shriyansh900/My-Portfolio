@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
+import { MdDarkMode } from "react-icons/md";
 
 const Header = ({ darkMode, toggleDarkMode }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +32,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 dark:bg-dark-200/90 backdrop-blur-md shadow-sm"
+          ? "bg-white/50 dark:bg-dark-200/60 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -61,22 +62,24 @@ const Header = ({ darkMode, toggleDarkMode }) => {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 font-medium transition duration-300"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400  font-medium transition duration-300"
             >
               {item.name}
             </a>
           ))}
-          <button
+          <motion.button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full bg-gray-100 dark:bg-dark-100 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-dark-300 transition duration-500  "
+            className="p-2 rounded-full bg-gray-800  dark:bg-dark-100 text-gray-800 dark:text-gray-200 hover:bg-gray-400 dark:hover:bg-dark-300 transition duration-500"
             aria-label="Toggle dark mode"
+            animate={{ rotate: darkMode ? 90 : 0 }}
+            transition={{ duration: 0.1 }}
           >
             {darkMode ? (
-              <FiSun className="text-xl text-yellow-400 " />
+              <FiSun className="text-xl text-yellow-400" />
             ) : (
-              <FiMoon className="text-xl " />
+              <MdDarkMode className="text-xl text-white" />
             )}
-          </button>
+          </motion.button>
         </motion.nav>
 
         {/* Mobile Menu Button */}

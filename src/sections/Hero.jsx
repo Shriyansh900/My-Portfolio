@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { FiArrowDown } from "react-icons/fi";
 import { aboutMe } from "../data";
 import { IoMdDownload } from "react-icons/io";
-import MyPic from "../assets/businessman-profile-icon-male-portrait-flat-design-vector-illustration-47075259.webp";
+import MyPic from "../assets/developer.svg";
+// import bgDark from "../assets/Dark-background.png"
+// import bgLight from "../assets/light-backgroung.png"
 
 const Hero = () => {
   const scrollToNextSection = () => {
@@ -12,13 +14,13 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 transition-all duration-500 ease-in-out"
     >
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 dark:from-black dark:to-blue-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 dark:from-black dark:to-blue-900/10 transition-all duration-500 ease-in-out"></div>
         {/* Abstract shapes */}
-        <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full bg-primary-400/10 blur-3xl dark:bg-primary-400/5"></div>
-        <div className="absolute bottom-20 right-1/4 w-64 h-64 rounded-full bg-secondary-400/10 blur-3xl dark:bg-secondary-400/5"></div>
+        <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full bg-primary-400/10 blur-3xl dark:bg-primary-400/5 transition-all duration-500 ease-in-out"></div>
+        <div className="absolute bottom-20 right-1/4 w-64 h-64 rounded-full bg-secondary-400/10 blur-3xl dark:bg-secondary-400/5 transition-all duration-500 ease-in-out"></div>
       </div>
 
       <div className="container-custom relative z-10">
@@ -34,28 +36,25 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <span
-                
-                className=" inline-block py-1 px-3 mb-4 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium"
-              >
+              <span className="inline-block py-1 px-3 mb-4 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium transition-all duration-500 ease-in-out">
                 <p>Full Stack Developer</p>
               </span>
             </motion.div>
 
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight transition-all duration-500 ease-in-out"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Hi, I'm&nbsp;
+              Hi, I&apos;m&nbsp;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">
                 {aboutMe.name}
               </span>
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto md:mx-0"
+              className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto md:mx-0 transition-all duration-500 ease-in-out"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
@@ -74,7 +73,7 @@ const Hero = () => {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start transition-all duration-500 ease-in-out"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
@@ -91,18 +90,18 @@ const Hero = () => {
                 className="btn btn-outline items-center flex align-middle justify-center space-x-1 px-10"
               >
                 <p>Resume</p>
-                <IoMdDownload className="text-xl  font-bold" />
+                <IoMdDownload className="text-xl font-bold" />
               </a>
             </motion.div>
           </motion.div>
 
           <motion.div
-            className="flex-1 relative"
+            className="flex-1 relative transition-all duration-500 ease-in-out"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="relative aspect-square max-w-md mx-auto overflow-hidden rounded-full border-4 border-white dark:border-dark-100 shadow-xl">
+            <div className="relative aspect-square max-w-md mx-auto overflow-hidden rounded-full border-4 border-white dark:border-dark-100 shadow-xl hover:scale-105 duration-500">
               <img
                 src={MyPic}
                 alt="Profile"
@@ -113,7 +112,7 @@ const Hero = () => {
         </div>
 
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer transition-all duration-500 ease-in-out"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{

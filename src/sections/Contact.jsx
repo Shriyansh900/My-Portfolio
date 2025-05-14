@@ -11,7 +11,6 @@ import {
 } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -31,70 +30,102 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch("http://localhost:2001/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitResult({
+          success: true,
+          message: "Thank you for your message! I'll get back to you soon.",
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        throw new Error(data.error || "Something went wrong");
+      }
+    } catch (error) {
       setSubmitResult({
-        success: true,
-        message: "Thank you for your message! I'll get back to you soon.",
+        success: false,
+        message: error.message || "Failed to submit form. Please try again.",
       });
+    } finally {
+      setIsSubmitting(false);
 
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-
-      // Clear success message after 5 seconds
+      // Clear message after 5 seconds
       setTimeout(() => {
         setSubmitResult({ success: false, message: "" });
       }, 5000);
-    }, 1500);
+    }
   };
 
   const contactInfo = [
     {
       icon: <FiMapPin className="text-xl" />,
       title: "Location",
-      content: "Indore (MP) , India",
+      content: "Indore, India",
     },
     {
       icon: <FiMail className="text-xl" />,
       title: "Email",
-      content: "sozarkar7@gmail.com",
+      content: (
+        <a className="hover:text-blue-400" href="mailto:sozarkar7@gmail.com">
+          sozarkar7@gmail.com
+        </a>
+      ),
     },
     {
       icon: <FiPhone className="text-xl" />,
       title: "Phone",
-      content: "(+91) 9009004976",
+      content: (
+        <a className="hover:text-blue-400" href="tel:+919009004976">
+          +91 9009004976
+        </a>
+      ),
     },
   ];
+
   const socialIcons = [
     {
-      social: 'Github',
-      icon: <FaGithub /> ,
-      link: 'https://github.com/Shriyansh900',
+      social: "Github",
+      icon: <FaGithub />,
+      link: "https://github.com/Shriyansh900",
     },
     {
-      social: 'Linkedin',
-      icon: <FiLinkedin/>,
-      link: 'https://www.linkedin.com/in/shriyansh-ozarkar/',
+      social: "Linkedin",
+      icon: <FiLinkedin />,
+      link: "https://www.linkedin.com/in/shriyansh-ozarkar/",
     },
     {
-      social: 'x',
-      icon: <FiTwitter/>,
-      link: 'https://x.com/Shriyansh_26' ,
+      social: "x",
+      icon: <FiTwitter />,
+      link: "https://x.com/Shriyansh_26",
     },
     {
-      social: 'Instagram',
-      icon: <FiInstagram/>,
-      link: 'https://www.instagram.com/shriyansh_26/' ,
+      social: "Instagram",
+      icon: <FiInstagram />,
+      link: "https://www.instagram.com/shriyansh_26/",
     },
   ];
 
@@ -154,13 +185,12 @@ const Contact = () => {
                   Follow Me
                 </h4>
                 <div className="flex space-x-4">
-                  {socialIcons.map(
+                   {socialIcons.map(
                     (item, index) => (
                       <a
                         key={index}
                         href={item.link}
-                        target="_blank"
-                        className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-300 text-gray-600 dark:text-gray-300 hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white transition-colors duration-300"
+                        className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-300 text-gray-600 dark:text-gray-300 hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white transition-colors duration-300 "
                         aria-label={`Visit my ${item.social}`}
                       >
                         <i>{item.icon}</i>
@@ -184,8 +214,14 @@ const Contact = () => {
                 Send Me a Message
               </h3>
 
-              {submitResult.success && (
-                <div className="mb-6 p-4 rounded-lg bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 border border-green-100 dark:border-green-900/30">
+              {submitResult.message && (
+                <div
+                  className={`mb-6 p-4 rounded-lg ${
+                    submitResult.success
+                      ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 border border-green-100 dark:border-green-900/30"
+                      : "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 border border-red-100 dark:border-red-900/30"
+                  }`}
+                >
                   {submitResult.message}
                 </div>
               )}
@@ -205,7 +241,7 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Enter Your Name..."
+                      placeholder="Enter Your Name Here..."
                       required
                       className={inputClasses}
                     />
@@ -223,7 +259,7 @@ const Contact = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="Enter your Email Id..."
+                      placeholder="Enter Your Email id"
                       required
                       className={inputClasses}
                     />
@@ -243,7 +279,7 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Enter Subject..."
+                    placeholder="How can I help you?"
                     required
                     className={inputClasses}
                   />
@@ -262,7 +298,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="5"
-                    placeholder="Let me know how I can help..."
+                    placeholder="Enter your message here.."
                     required
                     className={inputClasses}
                   ></textarea>

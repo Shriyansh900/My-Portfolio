@@ -97,7 +97,7 @@ const Portfolio = () => {
               <motion.div
                 key={project.id}
                 variants={itemVariants}
-                className="group relative rounded-xl overflow-hidden bg-white dark:bg-dark-100 shadow-md hover:shadow-xl transition-all duration-500 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r before:from-primary-500/20 before:to-secondary-500/20 before:opacity-0 before:transition-opacity hover:before:opacity-100 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(59,130,246,0.1)] border border-transparent hover:border-primary-200 dark:hover:border-primary-800"
+                className="group relative rounded-xl overflow-hidden bg-white dark:bg-dark-100 shadow-md transition-all duration-500 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r before:from-primary-500/20 before:to-secondary-500/20 before:opacity-0 before:transition-opacity hover:before:opacity-100 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(59,130,246,0.1)] border border-transparent hover:border-primary-200 dark:hover:border-primary-800"
               >
                 <div className="relative overflow-hidden aspect-video">
                   <img
