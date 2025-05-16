@@ -145,7 +145,7 @@ const Contact = () => {
           <h2 className="section-title pb-4">Contact Me</h2>
           <p className="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Have a project in mind or want to discuss collaboration
-            opportunities? I'd love to hear from you!
+            opportunities? I&apos;d love to hear from you!
           </p>
         </motion.div>
 
