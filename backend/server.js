@@ -12,7 +12,7 @@ const app = express();
 // CORS configuration based on environment
 const allowedOrigins =
   process.env.NODE_ENV === "production"
-    ? ["https://your-frontend-domain.vercel.app"]
+    ? ["https://my-portfolio-one-gray-16.vercel.app/"]
     : ["http://localhost:5173"];
 
 app.use(
