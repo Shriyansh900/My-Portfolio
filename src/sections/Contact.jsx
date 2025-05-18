@@ -35,13 +35,16 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to submit form");
@@ -185,18 +188,16 @@ const Contact = () => {
                   Follow Me
                 </h4>
                 <div className="flex space-x-4">
-                   {socialIcons.map(
-                    (item, index) => (
-                      <a
-                        key={index}
-                        href={item.link}
-                        className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-300 text-gray-600 dark:text-gray-300 hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white transition-colors duration-300 "
-                        aria-label={`Visit my ${item.social}`}
-                      >
-                        <i>{item.icon}</i>
-                      </a>
-                    )
-                  )}
+                  {socialIcons.map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.link}
+                      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-300 text-gray-600 dark:text-gray-300 hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white transition-colors duration-300 "
+                      aria-label={`Visit my ${item.social}`}
+                    >
+                      <i>{item.icon}</i>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
