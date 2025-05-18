@@ -1,3 +1,4 @@
+/* global process */
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -8,9 +9,15 @@ dotenv.config();
 
 const app = express();
 
+// CORS configuration based on environment
+const allowedOrigins =
+  process.env.NODE_ENV === "production"
+    ? ["https://your-frontend-domain.vercel.app"]
+    : ["http://localhost:5173"];
+
 app.use(
   cors({
-    origin: "http://localhost:5173", // Replace with your frontend's URL
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
     credentials: true,
   })
@@ -22,11 +29,18 @@ connectDB();
 // Middleware
 app.use(express.json());
 
+// Health check endpoint
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 // Routes
 app.use("/api/contact", contactRoutes);
 
-const PORT = dotenv.config().parsed?.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(
+    `Server is running on port ${PORT} in ${process.env.NODE_ENV} mode`
+  );
 });
