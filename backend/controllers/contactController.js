@@ -1,20 +1,5 @@
 import Contact from "../models/Contact.js";
 
-// Function to format date
-const formatDate = (date) => {
-  const day = date.getDate().toString().padStart(2, "0");
-  const month = (date.getMonth() + 1).toString().padStart(2, "0");
-  const year = date.getFullYear();
-  const hours = date.getHours().toString().padStart(2, "0");
-  const minutes = date.getMinutes().toString().padStart(2, "0");
-  const ampm = hours >= 12 ? "pm" : "am";
-
-  return {
-    date: `${day}/${month}/${year}`,
-    time: `${hours}:${minutes}/${ampm}`
-  };
-};
-
 // @desc    Create new contact message
 // @route   POST /api/contact
 // @access  Public
@@ -40,17 +25,14 @@ export const createContact = async (req, res) => {
       message,
     });
 
-    // Format the date before sending response
-    const formattedContact = {
-      ...contact.toObject(),
-      createdAt: formatDate(contact.createdAt)
-    };
+    // Convert to object to apply getters
+    const contactObj = contact.toObject();
 
     console.log("Contact created successfully:", contact._id);
 
     res.status(201).json({
       success: true,
-      data: formattedContact,
+      data: contactObj,
     });
   } catch (error) {
     console.error("Error creating contact:", error);
@@ -68,11 +50,8 @@ export const getContacts = async (req, res) => {
   try {
     const contacts = await Contact.find().sort("-createdAt");
 
-    // Format dates for all contacts
-    const formattedContacts = contacts.map(contact => ({
-      ...contact.toObject(),
-      createdAt: formatDate(contact.createdAt)
-    }));
+    // Convert to objects to apply getters
+    const formattedContacts = contacts.map((contact) => contact.toObject());
 
     res.status(200).json({
       success: true,
