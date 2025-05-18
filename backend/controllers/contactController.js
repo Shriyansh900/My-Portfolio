@@ -1,32 +1,18 @@
 import Contact from "../models/Contact.js";
 
 // Function to format date
-const formatDate = (dateString) => {
-  // Convert string to Date object
-  const date = new Date(dateString);
+const formatDate = (date) => {
+  const day = date.getDate().toString().padStart(2, "0");
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  const year = date.getFullYear();
+  const hours = date.getHours().toString().padStart(2, "0");
+  const minutes = date.getMinutes().toString().padStart(2, "0");
+  const ampm = hours >= 12 ? "pm" : "am";
 
-  // Check if date is valid
-  if (!(date instanceof Date) || isNaN(date)) {
-    console.error("Invalid date:", dateString);
-    return null;
-  }
-
-  try {
-    const day = date.getDate().toString().padStart(2, "0");
-    const month = (date.getMonth() + 1).toString().padStart(2, "0");
-    const year = date.getFullYear();
-    const hours = date.getHours().toString().padStart(2, "0");
-    const minutes = date.getMinutes().toString().padStart(2, "0");
-    const ampm = hours >= 12 ? "pm" : "am";
-
-    return {
-      date: `${day}/${month}/${year}`,
-      time: `${hours}:${minutes}/${ampm}`,
-    };
-  } catch (error) {
-    console.error("Error formatting date:", error);
-    return null;
-  }
+  return {
+    date: `${day}/${month}/${year}`,
+    time: `${hours}:${minutes}/${ampm}`
+  };
 };
 
 // @desc    Create new contact message
@@ -55,10 +41,9 @@ export const createContact = async (req, res) => {
     });
 
     // Format the date before sending response
-    const contactObj = contact.toObject();
     const formattedContact = {
-      ...contactObj,
-      createdAt: formatDate(contactObj.createdAt),
+      ...contact.toObject(),
+      createdAt: formatDate(contact.createdAt)
     };
 
     console.log("Contact created successfully:", contact._id);
@@ -84,13 +69,10 @@ export const getContacts = async (req, res) => {
     const contacts = await Contact.find().sort("-createdAt");
 
     // Format dates for all contacts
-    const formattedContacts = contacts.map((contact) => {
-      const contactObj = contact.toObject();
-      return {
-        ...contactObj,
-        createdAt: formatDate(contactObj.createdAt),
-      };
-    });
+    const formattedContacts = contacts.map(contact => ({
+      ...contact.toObject(),
+      createdAt: formatDate(contact.createdAt)
+    }));
 
     res.status(200).json({
       success: true,
