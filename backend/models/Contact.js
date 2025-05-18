@@ -31,27 +31,27 @@ const contactSchema = new mongoose.Schema(
       get: function (date) {
         if (!date) return;
 
-        // Format date as dd/mm/yy
+        // Format date as day/month/year
         const day = date.getDate().toString().padStart(2, "0");
         const month = (date.getMonth() + 1).toString().padStart(2, "0");
-        const year = date.getFullYear().toString().slice(-2);
+        const year = date.getFullYear();
 
-        // Format time as hr:min AM/PM
-        let hours = date.getHours();
+        // Format time as hour/minute/am/pm in 24-hour format
+        const hours = date.getHours().toString().padStart(2, "0");
         const minutes = date.getMinutes().toString().padStart(2, "0");
-        const ampm = hours >= 12 ? "PM" : "AM";
-        hours = hours % 12;
-        hours = hours ? hours : 12; // Convert 0 to 12
-        const time = `${hours}:${minutes} ${ampm}`;
+        const ampm = hours >= 12 ? "pm" : "am";
 
-        return `${day}/${month}/${year} - ${time}`;
+        return {
+          date: `${day}/${month}/${year}`,
+          time: `${hours}:${minutes}/${ampm}`,
+        };
       },
     },
   },
   {
-    timestamps: true,
-    toJSON: { getters: true }, // Enable getters when document is converted to JSON
-    toObject: { getters: true }, // Enable getters when document is converted to object
+    timestamps: false, // This removes both createdAt and updatedAt
+    toJSON: { getters: true },
+    toObject: { getters: true },
   }
 );
 
