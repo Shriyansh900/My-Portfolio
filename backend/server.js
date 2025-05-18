@@ -25,7 +25,7 @@ app.use(express.json());
 // Routes
 app.use("/api/contact", contactRoutes);
 
-const PORT = dotenv.config().parsed?.PORT;
+const PORT = dotenv.config().parsed?.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
