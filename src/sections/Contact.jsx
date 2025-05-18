@@ -35,22 +35,36 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      // Log the API URL and form data
+      console.log("Submitting to:", import.meta.env.VITE_API_URL);
+      console.log("Form data:", formData);
+
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/api/contact`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            // Add CORS headers
+            Accept: "application/json",
           },
           body: JSON.stringify(formData),
+          // Add CORS credentials
+          credentials: "include",
         }
       );
 
+      // Log the response status
+      console.log("Response status:", response.status);
+
       if (!response.ok) {
-        throw new Error("Failed to submit form");
+        const errorData = await response.json().catch(() => null);
+        console.error("Error response:", errorData);
+        throw new Error(errorData?.error || "Failed to submit form");
       }
 
       const data = await response.json();
+      console.log("Success response:", data);
 
       if (data.success) {
         setSubmitResult({
@@ -69,6 +83,7 @@ const Contact = () => {
         throw new Error(data.error || "Something went wrong");
       }
     } catch (error) {
+      console.error("Submission error:", error);
       setSubmitResult({
         success: false,
         message: error.message || "Failed to submit form. Please try again.",
