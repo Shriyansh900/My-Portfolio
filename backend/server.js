@@ -37,7 +37,7 @@ app.get("/health", (req, res) => {
 // Routes
 app.use("/api/contact", contactRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 2001;
 
 app.listen(PORT, () => {
   console.log(
