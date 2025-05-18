@@ -96,7 +96,7 @@ export const projects = [
     image:
       "https://c7.alamy.com/comp/2HP32FW/business-concept-influencer-marketing-big-group-of-clerks-ready-teamwork-filming-of-the-celebrity-and-advance-of-the-content-team-of-businessmen-together-successfully-perform-the-job-2HP32FW.jpg",
     tags: ["Reac.Js", "Redux", "tailwind"],
-    category: "Web Application",
+    category: "Fullstack",
     link: "#",
     github: "#",
   },
@@ -108,7 +108,7 @@ export const projects = [
     image:
       "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["React", "Tailwind", "crypto api"],
-    category: "Web Application",
+    category: "Frontend",
     link: "https://crypto-app-shriyansh-ozarkars-projects.vercel.app/",
     github: "https://github.com/Shriyansh900/crypto-app-main",
   },
@@ -120,7 +120,7 @@ export const projects = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy_uJaBu-kwf2g6JDfVnHQPCyFm-jFs12eQw&s",
     tags: ["React ", "Pokemon Api", "Tailwind"],
-    category: "Web Application",
+    category: "Frontend",
     link: "https://guess-the-pokemon-game-pied.vercel.app/",
     github: "https://github.com/Shriyansh900/Guess-the-Pokemon-game",
   },
@@ -132,21 +132,21 @@ export const projects = [
     image:
       "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600",
     tags: ["React", "Node.js", "Tailwind",],
-    category: "Web Application",
+    category: "Fullstack",
     link: "https://interior-designer-website.vercel.app/",
     github: "https://github.com/Shriyansh900/Interior-Designer-Website",
   },
   {
     id: 5,
-    title: "Wheelzy",
+    title: "Car Rental App",
     description:
       "A full-stack Car Rental website built using React.js and styled with Tailwind CSS, featuring user authentication, car listings, booking functionality, and an admin dashboard. The backend is powered by Node.js, Express.js, and MongoDB, enabling seamless data management and a responsive, user-friendly experience across all devices.",
     image:
       "https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["React", "Express", "MongoDB", "State management" , "React routing"],
-    category: "Web Application",
-    link: "#",
-    github: "#",
+    category: "Fullstack",
+    link: "https://car-rental-app-green-kappa.vercel.app/",
+    github: "https://github.com/Shriyansh900/carental_final-1-",
   },
   {
     id: 6,
@@ -154,12 +154,13 @@ export const projects = [
     description:
       "Real-time weather forecasting with interactive maps, historical data, and location-based alerts.",
     image:
-      "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://en.pimg.jp/058/539/486/1/58539486.jpg",
     tags: ["JavaScript", "HTML/CSS", "Weather API"],
-    category: "Web Application",
+    category: "Frontend",
     link: "#",
     github: "#",
   },
+
 ];
 
 // Testimonials data

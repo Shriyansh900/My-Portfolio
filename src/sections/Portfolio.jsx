@@ -55,10 +55,9 @@ const Portfolio = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="section-title pb-4">My Portfolio</h2>
+          <h2 className="section-title pb-4">My Projects</h2>
           <p className="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Explore my recent projects showcasing my skills and experience in
-            creating innovative and user-friendly applications.
+            Explore projects that highlight my journey of transforming ideas into dynamic, user-centered applications.
           </p>
         </motion.div>
 
@@ -110,7 +109,7 @@ const Portfolio = () => {
                       <a
                         href={project.github}
                         target="_blank"
-                        className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
+                        className="bg-white/20 hover:bg-blue-400/40 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
                         aria-label="GitHub Repository"
                       >
                         <FiGithub className="text-lg" />
@@ -118,7 +117,7 @@ const Portfolio = () => {
                       <a
                         href={project.link}
                         target="_blank"
-                        className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
+                        className="bg-white/20 hover:bg-emerald-400/40 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
                         aria-label="Live Preview"
                       >
                         <FiExternalLink className="text-lg" />
