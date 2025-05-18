@@ -25,11 +25,14 @@ export const createContact = async (req, res) => {
       message,
     });
 
+    // Convert to object to apply getters
+    const contactObj = contact.toObject();
+
     console.log("Contact created successfully:", contact._id);
 
     res.status(201).json({
       success: true,
-      data: contact,
+      data: contactObj,
     });
   } catch (error) {
     console.error("Error creating contact:", error);
@@ -47,10 +50,13 @@ export const getContacts = async (req, res) => {
   try {
     const contacts = await Contact.find().sort("-createdAt");
 
+    // Convert to objects to apply getters
+    const formattedContacts = contacts.map((contact) => contact.toObject());
+
     res.status(200).json({
       success: true,
       count: contacts.length,
-      data: contacts,
+      data: formattedContacts,
     });
   } catch (error) {
     console.error("Error fetching contacts:", error);
