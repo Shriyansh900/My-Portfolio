@@ -221,7 +221,7 @@ export const education = [
     year: "2021 - 2024",
     course: "Bachelor of Technology in Electrical Engineering",
     school: "Rajiv Gandhi Proudyogiki Vishwavidyalaya",
-    grade: "72%",
+    grade: "7.57 CGPA",
     description:
       "I completed my BTech in Electrical Engineering from Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal. During this program, I gained a strong foundation in core electrical concepts, including circuits, power systems, electronics, and control systems. My academic journey at RGPV not only equipped me with technical expertise but also fostered problem-solving, analytical thinking, and project management skills. This educational experience laid the groundwork for my transition into the world of software development, where I now apply my engineering mindset to develop innovative web and mobile solutions.",
   },
