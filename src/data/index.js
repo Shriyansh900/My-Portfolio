@@ -128,10 +128,10 @@ export const projects = [
     id: 4,
     title: "Studio-Maanikh",
     description:
-      "Studio-Maanikh is a modern interior design studio that blends aesthetics with functionality to create timeless living and working spaces. This portfolio website showcases their elegant projects, design philosophy, and attention to detail through a clean, user-friendly interface that reflects the studio’s refined style.",
+      "Studio-Maanikh is a modern interior design studio that blends aesthetics with functionality to create timeless living and working spaces. This portfolio website showcases their elegant projects, design philosophy, and attention to detail through a clean, user-friendly interface that reflects the studio's refined style.",
     image:
       "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600",
-    tags: ["React", "Node.js", "Tailwind",],
+    tags: ["React", "Node.js", "Tailwind"],
     category: "Fullstack",
     link: "https://interior-designer-website.vercel.app/",
     github: "https://github.com/Shriyansh900/Interior-Designer-Website",
@@ -143,7 +143,7 @@ export const projects = [
       "A full-stack Car Rental website built using React.js and styled with Tailwind CSS, featuring user authentication, car listings, booking functionality, and an admin dashboard. The backend is powered by Node.js, Express.js, and MongoDB, enabling seamless data management and a responsive, user-friendly experience across all devices.",
     image:
       "https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React", "Express", "MongoDB", "State management" , "React routing"],
+    tags: ["React", "Express", "MongoDB", "State management", "React routing"],
     category: "Fullstack",
     link: "https://car-rental-app-green-kappa.vercel.app/",
     github: "https://github.com/Shriyansh900/carental_final-1-",
@@ -153,14 +153,12 @@ export const projects = [
     title: "Weather Dashboard",
     description:
       "Real-time weather forecasting with interactive maps, historical data, and location-based alerts.",
-    image:
-      "https://en.pimg.jp/058/539/486/1/58539486.jpg",
+    image: "https://en.pimg.jp/058/539/486/1/58539486.jpg",
     tags: ["JavaScript", "HTML/CSS", "Weather API"],
     category: "Frontend",
     link: "#",
     github: "#",
   },
-
 ];
 
 // Testimonials data
@@ -203,10 +201,14 @@ export const testimonials = [
 export const timeline = [
   {
     year: "2024 - Present",
-    role: "Full Stach [MERN] Developer (Intern) ",
-    company: "Aimfortech Solutions, Indore",
-    description:
-      "Leading fullstack development for enterprise clients, implementing modern architectures, and mentoring junior developers.",
+    role: "Full Stack [MERN] Developer (Intern)",
+    company: "Eskills Web, Indore",
+    description: [
+      "• Built and integrated RESTful APIs for dynamic data handling",
+      "• Collaborated with team members on UI/UX design and development",
+      "• Used Git/GitHub for version control and project collaboration",
+      "• Gained practical experience in debugging, testing, and deployment",
+    ],
   },
 ];
 export const education = [
@@ -252,9 +254,9 @@ export const aboutMe = {
   location: "Indore (MP) , India",
   email: "sozarkar7@gmail.com",
   linkedin: "shriyansh-ozarkar",
-  bio: `Hi, I'm Shriyansh Ozarkar — a full-stack developer from Indore, India, who loves turning ideas into real, working digital experiences. I work with the MERN stack — that’s MongoDB for managing data, Express.js and Node.js for building the backend logic, and React.js for creating smooth, interactive user interfaces. I also have a solid grip on C and C++, which gave me my start in coding and taught me how to think logically and solve problems from the ground up.
+  bio: `Hi, I'm Shriyansh Ozarkar — a full-stack developer from Indore, India, who loves turning ideas into real, working digital experiences. I work with the MERN stack — that's MongoDB for managing data, Express.js and Node.js for building the backend logic, and React.js for creating smooth, interactive user interfaces. I also have a solid grip on C and C++, which gave me my start in coding and taught me how to think logically and solve problems from the ground up.
 
-My background in electrical engineering taught me how to approach challenges with a practical mindset, and I’ve carried that into my work as a developer. Whether I’m building a responsive website or a mobile app, I focus on writing clean code, creating intuitive designs, and always learning something new along the way. For me, tech isn't just a career — it's a passion that keeps me curious and constantly pushing to improve.`,
+My background in electrical engineering taught me how to approach challenges with a practical mindset, and I've carried that into my work as a developer. Whether I'm building a responsive website or a mobile app, I focus on writing clean code, creating intuitive designs, and always learning something new along the way. For me, tech isn't just a career — it's a passion that keeps me curious and constantly pushing to improve.`,
   funFacts: [
     "Contributed to multiple open source projects",
     "Organized local web development meetups",
