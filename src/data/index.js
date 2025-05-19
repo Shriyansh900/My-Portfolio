@@ -192,14 +192,14 @@ export const timeline = [
   },
 ];
 export const education = [
-  {
-    year: "2016",
-    course: "High School (10th)",
-    school: "Madhya Pradesh Board of Secondary Education",
-    grade: "57%",
-    description:
-      "Completed 10th standard under MP Board with a strong academic foundation, gaining essential knowledge in science, mathematics, and language subjects, which built the base for future education.",
-  },
+  // {
+  //   year: "2016",
+  //   course: "High School (10th)",
+  //   school: "Madhya Pradesh Board of Secondary Education",
+  //   grade: "57%",
+  //   description:
+  //     "Completed 10th standard under MP Board with a strong academic foundation, gaining essential knowledge in science, mathematics, and language subjects, which built the base for future education.",
+  // },
   {
     year: "2016 - 2021",
     course: "Diploma in Electrical Engineering [E.E]",
