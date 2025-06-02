@@ -64,6 +64,10 @@ export const skills = [
     name: "Firebase",
     icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
   },
+  {
+    name: "Docker",
+    icon: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg",
+  },
 ];
 
 // Portfolio projects data
