@@ -1,5 +1,8 @@
 import mongoose from "mongoose";
 
+// If using ES modules and 'process' is not available, import it explicitly
+import process from "process";
+
 const connectDB = async () => {
   try {
     if (!process.env.MONGO_URI) {
