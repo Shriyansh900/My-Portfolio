@@ -86,7 +86,7 @@ const Hero = () => {
               </a>
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1xWrCg2kj19KYgKv5uzAEiOy4N5D_yuT_/view?usp=sharing"
+                href="https://docs.google.com/document/d/13YBy2qa5tWIa0xufK42o40AZB-1lqlpT/edit?usp=sharing&ouid=100216613012205943550&rtpof=true&sd=true"
                 className="btn btn-outline items-center flex align-middle justify-center space-x-1 px-10"
               >
                 <p>Resume</p>
