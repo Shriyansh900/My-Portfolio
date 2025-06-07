@@ -74,18 +74,6 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "InfluX",
-    description:
-      "InfluX is a influencer or Content Creator booking platform connects brands and event organizers with top influencers for concerts, promotions, sponsorships, and other events. Built for ease and efficiency, it enables seamless discovery, booking, and collaboration with influencers and creators across various niches.",
-    image:
-      "https://c7.alamy.com/comp/2HP32FW/business-concept-influencer-marketing-big-group-of-clerks-ready-teamwork-filming-of-the-celebrity-and-advance-of-the-content-team-of-businessmen-together-successfully-perform-the-job-2HP32FW.jpg",
-    tags: ["Reac.Js", "Redux", "tailwind"],
-    category: "Fullstack",
-    link: "#",
-    github: "#",
-  },
-  {
-    id: 2,
     title: "Crypto-Sphere",
     description:
       "cryptoSphere website provides users real-time cryptocurrency data, market trends, and secure tools for tracking and managing digital assets—all in one intuitive and responsive platform.",
@@ -97,7 +85,7 @@ export const projects = [
     github: "https://github.com/Shriyansh900/crypto-app-main",
   },
   {
-    id: 3,
+    id: 2,
     title: "Pokemon Guess App",
     description:
       "Who's That Pokémon? is a fun and nostalgic guessing game where you identify Pokémon from their silhouettes, just like in the classic TV show. With hundreds of Pokémon from all generations, simple gameplay, and increasing difficulty levels, it's the perfect challenge for fans of all ages!",
@@ -109,19 +97,19 @@ export const projects = [
     github: "https://github.com/Shriyansh900/Guess-the-Pokemon-game",
   },
   {
-    id: 4,
+    id: 3,
     title: "Studio-Maanikh",
     description:
       "Studio-Maanikh is a modern interior design studio that blends aesthetics with functionality to create timeless living and working spaces. This portfolio website showcases their elegant projects, design philosophy, and attention to detail through a clean, user-friendly interface that reflects the studio's refined style.",
     image:
       "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600",
-    tags: ["React", "Node.js", "Tailwind"],
+    tags: ["React", "Node.js", "Tailwind" ,],
     category: "Fullstack",
-    link: "https://interior-designer-website.vercel.app/",
-    github: "https://github.com/Shriyansh900/Interior-Designer-Website",
+    link: "https://interior-designer-gold.vercel.app/",
+    github: "https://github.com/Shriyansh900/Interior-Designer",
   },
   {
-    id: 5,
+    id: 4,
     title: "Car Rental App",
     description:
       "A full-stack Car Rental website built using React.js and styled with Tailwind CSS, featuring user authentication, car listings, booking functionality, and an admin dashboard. The backend is powered by Node.js, Express.js, and MongoDB, enabling seamless data management and a responsive, user-friendly experience across all devices.",
@@ -133,7 +121,7 @@ export const projects = [
     github: "https://github.com/Shriyansh900/carental_final-1-",
   },
   {
-    id: 6,
+    id: 5,
     title: "Weather Dashboard",
     description:
       "Real-time weather forecasting with interactive maps, historical data, and location-based alerts.",
