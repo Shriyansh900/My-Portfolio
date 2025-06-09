@@ -172,7 +172,7 @@ export const testimonials = [
 // Timeline data for the About section
 export const timeline = [
   {
-    year: "2024 - Present",
+    year: "08-2024 - 05-2025",
     role: "Full Stack [MERN] Developer (Intern)",
     company: "Eskills Web, Indore",
     description: [
