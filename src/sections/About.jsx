@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FiMapPin, FiMail, FiUser, FiCalendar, FiLinkedin } from 'react-icons/fi'
 import { aboutMe, education, timeline } from '../data'
-import MyPic from "../assets/IMG_20230112_222005_348.jpg"
+import MyPic from "../assets/Shriyansh_Ozarkar.jpg"
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -132,7 +132,7 @@ const About = () => {
                 <img 
                   src={MyPic} 
                   alt={aboutMe.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-fill"
                 />
               </motion.div>
 
