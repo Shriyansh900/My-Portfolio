@@ -86,6 +86,18 @@ export const projects = [
   },
   {
     id: 2,
+    title: "AI-ChatBot",
+    description:
+      "I built an AI Chatbot using React.js, Tailwind CSS, and the Google Gemini API. It delivers real-time conversational responses in a clean, responsive UI with support for formatted text and code blocks. This project showcases my skills in integrating AI with modern web applications.",
+    image:
+      "https://media.istockphoto.com/id/1454952504/vector/chatbot-customer-service-abstract-concept-vector-illustration.jpg?s=2048x2048&w=is&k=20&c=4Akgu4rEMOJ59Nl0QQRFA_2_pPLXdXZhc4NjRUqJ0Hs=",
+    tags: ["React", "Tailwind", "crypto api"],
+    category: "Frontend",
+    link: "https://ai-chatbot-sigma-rouge.vercel.app/",
+    github: "https://github.com/Shriyansh900/AIChatbot",
+  },
+  {
+    id: 3,
     title: "Pokemon Guess App",
     description:
       "Who's That Pokémon? is a fun and nostalgic guessing game where you identify Pokémon from their silhouettes, just like in the classic TV show. With hundreds of Pokémon from all generations, simple gameplay, and increasing difficulty levels, it's the perfect challenge for fans of all ages!",
@@ -97,7 +109,7 @@ export const projects = [
     github: "https://github.com/Shriyansh900/Guess-the-Pokemon-game",
   },
   {
-    id: 3,
+    id: 4,
     title: "Studio-Maanikh",
     description:
       "Studio-Maanikh is a modern interior design studio that blends aesthetics with functionality to create timeless living and working spaces. This portfolio website showcases their elegant projects, design philosophy, and attention to detail through a clean, user-friendly interface that reflects the studio's refined style.",
@@ -109,7 +121,7 @@ export const projects = [
     github: "https://github.com/Shriyansh900/Interior-Designer",
   },
   {
-    id: 4,
+    id: 5,
     title: "Car Rental App",
     description:
       "A full-stack Car Rental website built using React.js and styled with Tailwind CSS, featuring user authentication, car listings, booking functionality, and an admin dashboard. The backend is powered by Node.js, Express.js, and MongoDB, enabling seamless data management and a responsive, user-friendly experience across all devices.",
@@ -121,7 +133,7 @@ export const projects = [
     github: "https://github.com/Shriyansh900/carental_final-1-",
   },
   {
-    id: 5,
+    id: 6,
     title: "Weather Dashboard",
     description:
       "Real-time weather forecasting with interactive maps, historical data, and location-based alerts.",
