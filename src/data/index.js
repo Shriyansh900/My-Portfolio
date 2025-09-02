@@ -91,7 +91,7 @@ export const projects = [
       "I built an AI Chatbot using React.js, Tailwind CSS, and the Google Gemini API. It delivers real-time conversational responses in a clean, responsive UI with support for formatted text and code blocks. This project showcases my skills in integrating AI with modern web applications.",
     image:
       "https://media.istockphoto.com/id/1454952504/vector/chatbot-customer-service-abstract-concept-vector-illustration.jpg?s=2048x2048&w=is&k=20&c=4Akgu4rEMOJ59Nl0QQRFA_2_pPLXdXZhc4NjRUqJ0Hs=",
-    tags: ["React", "Tailwind", "crypto api"],
+    tags: ["React", "Tailwind", "Gemini api"],
     category: "Frontend",
     link: "https://ai-chatbot-sigma-rouge.vercel.app/",
     github: "https://github.com/Shriyansh900/AIChatbot",
