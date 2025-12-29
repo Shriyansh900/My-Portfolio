@@ -124,7 +124,9 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={item.label}
-                    className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-300 hover:bg-primary-500 hover:text-white transition-colors duration-300"
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-200
+                    hover:bg-primary-100 dark:hover:bg-primary-900 text-gray-700 dark:text-gray-300
+                    transition-colors duration-300"
                   >
                     {item.icon}
                   </a>
