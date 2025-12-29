@@ -1,74 +1,138 @@
 // Skills data
 export const skills = [
+  // 🔹 Programming Languages
   {
+    id: "c",
     name: "C Language",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+    category: "Programming",
+    level: "Intermediate",
   },
   {
+    id: "javascript",
     name: "JavaScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    category: "Programming",
+    level: "Advanced",
   },
   {
-    name: "NodeJS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  },
-  {
+    id: "typescript",
     name: "TypeScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    category: "Programming",
+    level: "Intermediate",
   },
+
+  // 🔹 Frontend
   {
-    name: "Express",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-  },
-  {
-    name: "Postman",
-    icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
-  },
-  {
-    name: "React Native",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
+    id: "html",
     name: "HTML",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    category: "Frontend",
+    level: "Advanced",
   },
   {
+    id: "css",
     name: "CSS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    category: "Frontend",
+    level: "Advanced",
   },
   {
-    name: "Bootstrap",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-  },
-  {
-    name: "Redux",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-  },
-  {
+    id: "react",
     name: "React",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    category: "Frontend",
+    level: "Advanced",
   },
   {
+    id: "redux",
+    name: "Redux",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    category: "Frontend",
+    level: "Intermediate",
+  },
+  {
+    id: "tailwind",
+    name: "Tailwind CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    category: "Frontend",
+    level: "Advanced",
+  },
+  {
+    id: "bootstrap",
+    name: "Bootstrap",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+    category: "Frontend",
+    level: "Intermediate",
+  },
+
+  // 🔹 Backend
+  {
+    id: "node",
+    name: "Node.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    category: "Backend",
+    level: "Intermediate",
+  },
+  {
+    id: "express",
+    name: "Express",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    category: "Backend",
+    level: "Intermediate",
+  },
+
+  // 🔹 Database
+  {
+    id: "mongodb",
     name: "MongoDB",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    category: "Database",
+    level: "Intermediate",
   },
   {
-    name: "Git",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-  },
-  {
+    id: "firebase",
     name: "Firebase",
     icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+    category: "Database",
+    level: "Intermediate",
+  },
+
+  // 🔹 Tools
+  {
+    id: "git",
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    category: "Tools",
+    level: "Advanced",
   },
   {
+    id: "postman",
+    name: "Postman",
+    icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    category: "Tools",
+    level: "Advanced",
+  },
+
+  // 🔹 DevOps
+  {
+    id: "docker",
     name: "Docker",
     icon: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg",
+    category: "DevOps",
+    level: "Beginner",
   },
-];
+
+  // 🔹 Mobile
+  {
+    id: "react-native",
+    name: "React Native",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    category: "Mobile",
+    level: "Intermediate",
+  },
+]
 
 // Portfolio projects data
 export const projects = [
@@ -184,15 +248,12 @@ export const testimonials = [
 // Timeline data for the About section
 export const timeline = [
   {
-    year: "08-2024 - 05-2025",
+    year: "February-2025 - October-2025",
     role: "Full Stack [MERN] Developer (Intern)",
     company: "Eskills Web, Indore",
-    description: [
-      "• Built and integrated RESTful APIs for dynamic data handling",
-      "• Collaborated with team members on UI/UX design and development",
-      "• Used Git/GitHub for version control and project collaboration",
-      "• Gained practical experience in debugging, testing, and deployment",
-    ],
+    description: `
+During my training and internship at eSkill Web, Indore, I worked as a Web Developer where I gained hands-on experience with the MERN stack. I contributed to building responsive web applications using React, Node.js, Express, and MongoDB, developed reusable components, integrated APIs, and fixed bugs to improve performance and user experience while collaborating closely with the development team.
+`,
   },
 ];
 export const education = [

@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
-import { FiArrowDown } from "react-icons/fi";
-import { aboutMe } from "../data";
-import { IoMdDownload } from "react-icons/io";
-import MyPic from "../assets/developer.svg";
+import { motion } from 'framer-motion';
+import { FiArrowDown } from 'react-icons/fi';
+import { aboutMe } from '../data';
+import { IoMdDownload } from 'react-icons/io';
+import MyPic from '../assets/developer.svg';
 // import bgDark from "../assets/Dark-background.png"
 // import bgLight from "../assets/light-backgroung.png"
 
 const Hero = () => {
   const scrollToNextSection = () => {
-    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -28,7 +28,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
             className="flex-1 text-center md:text-left"
           >
             <motion.div
@@ -86,7 +86,7 @@ const Hero = () => {
               </a>
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/16HnwjZLwwqVOJsM4xO2Pla7JtnxMCIF2/view?usp=sharing"
+                href="https://drive.google.com/file/d/1tj8krOsViXOPkhKBMMId6gFW1QFtYhWo/view?usp=sharing"
                 className="btn btn-outline items-center flex align-middle justify-center space-x-1 px-10"
               >
                 <p>Resume</p>
@@ -99,7 +99,7 @@ const Hero = () => {
             className="flex-1 relative transition-all duration-500 ease-in-out"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <div className="relative aspect-square max-w-md mx-auto overflow-hidden rounded-full border-4 border-white dark:border-dark-100 shadow-xl hover:scale-105 duration-500">
               <img
@@ -119,7 +119,7 @@ const Hero = () => {
             duration: 0.5,
             delay: 1.2,
             repeat: Infinity,
-            repeatType: "reverse",
+            repeatType: 'reverse',
             repeatDelay: 0.5,
           }}
           onClick={scrollToNextSection}
