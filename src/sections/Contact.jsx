@@ -47,7 +47,7 @@ const Contact = () => {
     },
     {
       icon: <FiLinkedin />,
-      link: "https://www.linkedin.com/in/shriyansh-ozarkar/",
+      link: "https://www.linkedin.com/in/shriyansh26/",
       label: "LinkedIn",
     },
     {

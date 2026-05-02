@@ -1,15 +1,31 @@
-import { FiGithub, FiTwitter, FiLinkedin, FiInstagram } from 'react-icons/fi'
-import { motion } from 'framer-motion'
+import { FiGithub, FiTwitter, FiLinkedin, FiInstagram } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <FiGithub />, href: 'https://github.com/Shriyansh900', label: 'GitHub' },
-    { icon: <FiTwitter />, href: 'https://x.com/Shriyansh_26', label: 'Twitter' },
-    { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/shriyansh-ozarkar/', label: 'LinkedIn' },
-    { icon: <FiInstagram />, href: 'https://www.instagram.com/shriyansh_26/', label: 'Instagram' },
-  ]
+    {
+      icon: <FiGithub />,
+      href: 'https://github.com/Shriyansh900',
+      label: 'GitHub',
+    },
+    {
+      icon: <FiTwitter />,
+      href: 'https://x.com/Shriyansh_26',
+      label: 'Twitter',
+    },
+    {
+      icon: <FiLinkedin />,
+      href: 'https://www.linkedin.com/in/shriyansh26/',
+      label: 'LinkedIn',
+    },
+    {
+      icon: <FiInstagram />,
+      href: 'https://www.instagram.com/shriyansh_26/',
+      label: 'Instagram',
+    },
+  ];
 
   return (
     <footer className="bg-gray-100 dark:bg-dark-100 py-12">
@@ -23,11 +39,15 @@ const Footer = () => {
             className="mb-6 md:mb-0"
           >
             <div className="flex flex-col">
-              <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent mb-2">
+              <a
+                href="#home"
+                className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent mb-2"
+              >
                 Portfolio
               </a>
               <p className="text-gray-600 dark:text-gray-400 max-w-md">
-                Crafting digital experiences that blend creativity with functionality
+                Crafting digital experiences that blend creativity with
+                functionality
               </p>
             </div>
           </motion.div>
@@ -44,6 +64,8 @@ const Footer = () => {
                 <a
                   key={index}
                   href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={link.label}
                   className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 text-xl transition duration-300"
                 >
@@ -58,7 +80,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -164,7 +164,7 @@ const About = () => {
                   <li className="flex items-center space-x-3 text-gray-700 dark:text-gray-300">
                     <FiLinkedin className="text-primary-500 dark:text-primary-400" />
                     <span><strong>Linkedin:</strong> 
-                    <a href="https://www.linkedin.com/in/shriyansh-ozarkar/" className='hover:text-primary-500 '> {aboutMe.linkedin}</a>
+                    <a href="https://www.linkedin.com/in/shriyansh26/" className='hover:text-primary-500 '> {aboutMe.linkedin}</a>
                     </span>
                   </li>
                 </ul>

@@ -1,27 +1,27 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FiExternalLink, FiGithub } from "react-icons/fi";
-import { projects } from "../data";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { projects } from '../data';
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState('All');
   const [filteredProjects, setFilteredProjects] = useState(projects);
 
   const categories = [
-    "All",
+    'All',
     ...new Set(projects.map((project) => project.category)),
   ];
 
   const handleFilterClick = (category) => {
     setActiveFilter(category);
 
-    if (category === "All") {
+    if (category === 'All') {
       setFilteredProjects(projects);
       return;
     }
 
     const filtered = projects.filter(
-      (project) => project.category === category
+      (project) => project.category === category,
     );
     setFilteredProjects(filtered);
   };
@@ -57,7 +57,8 @@ const Portfolio = () => {
         >
           <h2 className="section-title pb-4">My Projects</h2>
           <p className="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Explore projects that highlight my journey of transforming ideas into dynamic, user-centered applications.
+            Explore projects that highlight my journey of transforming ideas
+            into dynamic, user-centered applications.
           </p>
         </motion.div>
 
@@ -74,8 +75,8 @@ const Portfolio = () => {
               onClick={() => handleFilterClick(category)}
               className={`px-4 py-2 rounded-full transition-all duration-300 ${
                 activeFilter === category
-                  ? "bg-primary-500 text-white"
-                  : "bg-white dark:bg-dark-100 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-200"
+                  ? 'bg-primary-500 text-white'
+                  : 'bg-white dark:bg-dark-100 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-200'
               }`}
             >
               {category}
@@ -106,22 +107,28 @@ const Portfolio = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
                     <div className="flex gap-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        className="bg-white/20 hover:bg-blue-400/40 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
-                        aria-label="GitHub Repository"
-                      >
-                        <FiGithub className="text-lg" />
-                      </a>
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        className="bg-white/20 hover:bg-emerald-400/40 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
-                        aria-label="Live Preview"
-                      >
-                        <FiExternalLink className="text-lg" />
-                      </a>
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-white/20 hover:bg-blue-400/40 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
+                          aria-label="GitHub Repository"
+                        >
+                          <FiGithub className="text-lg" />
+                        </a>
+                      )}
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-white/20 hover:bg-emerald-400/40 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
+                          aria-label="Live Preview"
+                        >
+                          <FiExternalLink className="text-lg" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
