@@ -46,9 +46,23 @@ export const skills = [
     level: 'Advanced',
   },
   {
+    id: 'next',
+    name: 'Nextjs',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+    category: 'Frontend',
+    level: 'Advanced',
+  },
+  {
     id: 'redux',
     name: 'Redux',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+    category: 'Frontend',
+    level: 'Intermediate',
+  },
+  {
+    id: 'zustand',
+    name: 'Zustand',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zustand/zustand-original.svg',
     category: 'Frontend',
     level: 'Intermediate',
   },
@@ -58,13 +72,6 @@ export const skills = [
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
     category: 'Frontend',
     level: 'Advanced',
-  },
-  {
-    id: 'bootstrap',
-    name: 'Bootstrap',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-    category: 'Frontend',
-    level: 'Intermediate',
   },
 
   // 🔹 Backend
@@ -92,10 +99,10 @@ export const skills = [
     level: 'Intermediate',
   },
   {
-    id: 'firebase',
-    name: 'Firebase',
-    icon: 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg',
-    category: 'Database',
+    id: 'python',
+    name: 'Python',
+    icon: 'https://www.vectorlogo.zone/logos/python/python-icon.svg',
+    category: 'Programming',
     level: 'Intermediate',
   },
 
@@ -132,12 +139,31 @@ export const skills = [
     category: 'Mobile',
     level: 'Intermediate',
   },
+  {
+    id: 'bun',
+    name: 'Bun',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bun/bun-original.svg',
+    category: 'Mobile',
+    level: 'Intermediate',
+  },
 ];
 
 // Portfolio projects data
 export const projects = [
   {
     id: 1,
+    title: 'Chat-z Web',
+    description:
+      'Chat-z Web is a sleek real-time chat application built for fast, seamless, and reliable communication. It delivers instant messaging with a smooth, responsive user experience.',
+    image:
+      'https://www.inofie.com/wp-content/uploads/2018/11/Screenshot-2020-06-07-at-10.47.54-AM.png',
+    tags: ['Next.js','Type Script' , 'Tailwind CSS', 'Socket.io', 'Redis'],
+    category: 'Frontend',
+    link: 'https://chat-z-eight.vercel.app/chat',
+    github: 'https://github.com/Shriyansh900/Chat-z',
+  },
+  {
+    id: 2,
     title: 'Crypto-Sphere',
     description:
       'cryptoSphere website provides users real-time cryptocurrency data, market trends, and secure tools for tracking and managing digital assets—all in one intuitive and responsive platform.',
@@ -149,7 +175,7 @@ export const projects = [
     github: 'https://github.com/Shriyansh900/crypto-app-main',
   },
   {
-    id: 2,
+    id: 3,
     title: 'AI-ChatBot',
     description:
       'I built an AI Chatbot using React.js, Tailwind CSS, and the Google Gemini API. It delivers real-time conversational responses in a clean, responsive UI with support for formatted text and code blocks. This project showcases my skills in integrating AI with modern web applications.',
@@ -161,7 +187,7 @@ export const projects = [
     github: 'https://github.com/Shriyansh900/AIChatbot',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Pokemon Guess App',
     description:
       "Who's That Pokémon? is a fun and nostalgic guessing game where you identify Pokémon from their silhouettes, just like in the classic TV show. With hundreds of Pokémon from all generations, simple gameplay, and increasing difficulty levels, it's the perfect challenge for fans of all ages!",
@@ -173,7 +199,7 @@ export const projects = [
     github: 'https://github.com/Shriyansh900/Guess-the-Pokemon-game',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Studio-Maanikh',
     description:
       "Studio-Maanikh is a modern interior design studio that blends aesthetics with functionality to create timeless living and working spaces. This portfolio website showcases their elegant projects, design philosophy, and attention to detail through a clean, user-friendly interface that reflects the studio's refined style.",
@@ -185,7 +211,7 @@ export const projects = [
     github: 'https://github.com/Shriyansh900/Interior-Designer',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Car Rental App',
     description:
       'A full-stack Car Rental website built using React.js and styled with Tailwind CSS, featuring user authentication, car listings, booking functionality, and an admin dashboard. The backend is powered by Node.js, Express.js, and MongoDB, enabling seamless data management and a responsive, user-friendly experience across all devices.',
@@ -197,7 +223,7 @@ export const projects = [
     github: 'https://github.com/Shriyansh900/carental_final-1-',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Weather Dashboard',
     description:
       'Real-time weather forecasting with interactive maps, historical data, and location-based alerts.',
@@ -206,6 +232,16 @@ export const projects = [
     category: 'Frontend',
     link: null,
     github: null,
+  },
+    {
+      id: 8,
+    title: 'Chat-z Backend',
+    description:'Chat-z Backend is a scalable and high-performance server built to power real-time messaging. It handles secure authentication, instant communication using WebSockets, and efficient data management with optimized APIs and caching, ensuring fast and reliable chat experiences.',
+    image: 'https://miro.medium.com/0*SK6KRF43kOmVDWnr.jpg',
+    tags: ['JavaScript', 'Node js', 'Mongo DB' , 'Socket io' , 'Redis' , 'Express'],
+    category: 'Backend',
+    link: 'https://chat-z-back.onrender.com/api/docs/',
+    github: 'https://github.com/Shriyansh900/chat_z_back',
   },
 ];
 

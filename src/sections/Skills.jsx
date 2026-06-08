@@ -86,11 +86,11 @@ const Skills = () => {
                   {skill.name}
                 </h3>
 
-                {skill.level && (
+                {/* {skill.level && (
                   <span className="text-xs text-primary-600 dark:text-primary-400">
                     {skill.level}
                   </span>
-                )}
+                )} */}
               </motion.div>
             ))}
           </motion.div>

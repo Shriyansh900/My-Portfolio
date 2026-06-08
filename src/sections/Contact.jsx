@@ -81,60 +81,77 @@ const Contact = () => {
         </motion.div>
 
         {/* Get in Touch Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="max-w-xl mx-auto"
-        >
-          <div className="bg-white dark:bg-dark-100 rounded-xl shadow-md p-8">
-            <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-              Get in Touch
-            </h3>
+    <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+  viewport={{ once: true }}
+  className="max-w-lg mx-auto"
+>
+  <div className="bg-white dark:bg-dark-100 rounded-xl 
+    shadow-lg border border-gray-200 dark:border-dark-300
+    p-6"
+  >
+    {/* Heading */}
+    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-5">
+      Get in Touch
+    </h3>
 
-            <div className="space-y-6">
-              {contactInfo.map((item, index) => (
-                <div key={index} className="flex space-x-4">
-                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 dark:text-gray-100">
-                      {item.title}
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      {item.content}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Social Links */}
-            <div className="mt-8">
-              <h4 className="font-semibold mb-4 text-gray-800 dark:text-gray-100">
-                Follow Me
-              </h4>
-              <div className="flex space-x-4">
-                {socialIcons.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={item.label}
-                    className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-200
-                    hover:bg-primary-100 dark:hover:bg-primary-900 text-gray-700 dark:text-gray-300
-                    transition-colors duration-300"
-                  >
-                    {item.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
+    {/* Contact Info */}
+    <div className="space-y-4">
+      {contactInfo.map((item, index) => (
+        <div key={index} className="flex items-center gap-3">
+          
+          {/* Icon */}
+          <div className="w-9 h-9 flex items-center justify-center 
+            rounded-full bg-blue-50 dark:bg-blue-900/20 
+            text-blue-600 text-lg"
+          >
+            {item.icon}
           </div>
-        </motion.div>
+
+          {/* Text */}
+          <div>
+            <p className="text-xs text-gray-500 uppercase tracking-wide">
+              {item.title}
+            </p>
+            <p className="text-sm text-gray-800 dark:text-gray-200 font-medium">
+              {item.content}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* Divider */}
+    <div className="my-5 border-t border-gray-200 dark:border-dark-300" />
+
+    {/* Social */}
+    <div>
+      <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+        Follow Me
+      </p>
+
+      <div className="flex gap-3">
+        {socialIcons.map((item, index) => (
+          <a
+            key={index}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-9 h-9 flex items-center justify-center 
+              rounded-full bg-gray-100 dark:bg-dark-200
+              text-gray-600 dark:text-gray-300
+              hover:bg-gray-200 dark:hover:bg-dark-300
+              transition"
+          >
+            {item.icon}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</motion.div>
 
       </div>
     </section>
