@@ -6,6 +6,7 @@ import { projects } from '../data';
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [filteredProjects, setFilteredProjects] = useState(projects);
+  const [expandedId, setExpandedId] = useState(null);
 
   const categories = [
     'All',
@@ -91,68 +92,77 @@ const Portfolio = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start"
           >
             {filteredProjects.map((project) => (
-              <motion.div
-                key={project.id}
-                variants={itemVariants}
-                className="group relative rounded-xl overflow-hidden bg-white dark:bg-dark-100 shadow-md transition-all duration-500 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r before:from-primary-500/20 before:to-secondary-500/20 before:opacity-0 before:transition-opacity hover:before:opacity-100 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(59,130,246,0.1)] border border-transparent hover:border-primary-200 dark:hover:border-primary-800"
-              >
-                <div className="relative overflow-hidden aspect-video">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                    <div className="flex gap-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-white/20 hover:bg-blue-400/40 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
-                          aria-label="GitHub Repository"
-                        >
-                          <FiGithub className="text-lg" />
-                        </a>
-                      )}
-                      {project.link && (
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-white/20 hover:bg-emerald-400/40 text-white p-2 rounded-full backdrop-blur-sm transition-colors duration-300"
-                          aria-label="Live Preview"
-                        >
-                          <FiExternalLink className="text-lg" />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </div>
+            <motion.div
+  key={project.id}
+  variants={itemVariants}
+  className="group rounded-xl overflow-hidden bg-white dark:bg-dark-100 shadow-md hover:shadow-lg transition-all duration-300"
+>
+  {/* IMAGE */}
+  <div className="overflow-hidden aspect-video">
+    <img
+      src={project.image}
+      alt={project.title}
+      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+  </div>
 
-                <div className="p-6 relative">
-                  <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-gray-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
-                    {project.description}
-                  </p>
+  {/* CONTENT */}
+  <div className="p-5 flex flex-col gap-4">
+    {/* TITLE */}
+    <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+      {project.title}
+    </h3>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="badge bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors duration-300"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
+    {/* BUTTONS */}
+    <div className="flex items-center justify-between gap-3 flex-wrap">
+      <div className="flex gap-3">
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-sm px-3 py-1.5 rounded-md bg-gray-100 dark:bg-dark-200 hover:bg-gray-200 transition"
+          >
+            <FiGithub /> GitHub
+          </a>
+        )}
+
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-sm px-3 py-1.5 rounded-md bg-primary-500 text-white hover:bg-primary-600 transition"
+          >
+            <FiExternalLink /> View
+          </a>
+        )}
+      </div>
+
+      {/* READ MORE */}
+<button
+  onClick={() =>
+    setExpandedId(expandedId === project.id ? null : project.id)
+  }
+  className="text-sm text-primary-500 hover:underline"
+>
+  {expandedId === project.id ? 'Show Less' : 'Read More...'}
+</button>
+    </div>
+
+    {/* OPTIONAL SHORT DESC */}
+  <p
+  className={`text-sm text-gray-600 dark:text-gray-300 transition-all duration-300 ${
+    expandedId === project.id ? '' : 'line-clamp-2'
+  }`}
+>
+  {project.description}
+</p>
+  </div>
+</motion.div>
             ))}
           </motion.div>
         </AnimatePresence>
