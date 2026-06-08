@@ -159,7 +159,7 @@ export const projects = [
       'https://www.inofie.com/wp-content/uploads/2018/11/Screenshot-2020-06-07-at-10.47.54-AM.png',
     tags: ['Next.js','Type Script' , 'Tailwind CSS', 'Socket.io', 'Redis'],
     category: 'Frontend',
-    link: 'https://chat-z-eight.vercel.app/chat',
+    link: 'https://chat-z-eight.vercel.app/',
     github: 'https://github.com/Shriyansh900/Chat-z',
   },
   {
